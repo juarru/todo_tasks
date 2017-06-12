@@ -13,4 +13,5 @@
     'application': True,
     'installable': True,
     'auto_install': False,
+    'data': ['views/todo_menu.xml', ],
 }
