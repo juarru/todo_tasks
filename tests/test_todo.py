@@ -6,7 +6,7 @@ from odoo.exceptions import AccessError
 class TestTodo(TransactionCase):
 
     def test_create(self):
-        '''Create a simple Todo'''
+        """Create a simple Todo"""
         Todo = self.env['todo.task']
         task = Todo.create({'name': 'Test Task'})
 
@@ -27,8 +27,7 @@ class TestTodo(TransactionCase):
         return result
 
     def test_record_rule(self):
-        '''Test per user record rules'''
-        print 'estoy aquí'
+        """Test per user record rules"""
         Todo = self.env['todo.task']
         task = Todo.sudo().create({'name': 'Admin Task'})
         with self.assertRaises(AccessError):
